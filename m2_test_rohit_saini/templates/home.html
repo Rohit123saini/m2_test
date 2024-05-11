@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+       <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+<header>
+
+        <div>
+            <img src="/static/images/logo.png" height=100% width="150px">
+        </div>
+    <div>
+
+        {% if  username %}
+        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
+
+        {% endif %}
+    </div>
+        <div class="right_header">
+            <a href="/home/orders/"><img src="/static/images/order_status.jpg" alt="orders" height=100% width="100px"></a>
+            <a href="/home/cart/"><img src="/static/images/basket.png" alt="cart" height=100% width="100px" ></a>
+
+            <a href="/admin_panal/"><img src="/static/images/admin_login.png" alt="admin" height=100% width="100px"></a>
+            <a href="/logout/"><img src="/static/images/logout.png" alt="cart" height=100% width="100px" ></a>
+
+        </div>
+
+</header>
+
+<div id="background-div">
+        <h7>At kittu, we're dedicated to providing you with the<br>
+    best products to enhance your life. Whether you're looking<br>
+  for innovative gadgets, stylish accessories, or practical tools,<br>
+   we have something for everyone.</h7>
+    </div>
+<script>
+    const backgrounds = [
+     'url(https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg)',
+    'url(https://st3.depositphotos.com/5444644/15662/i/450/depositphotos_156628490-stock-photo-woman-holding-colorful-shopping-bags.jpg)',
+    'url(https://t4.ftcdn.net/jpg/02/32/16/07/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg)',
+];
+
+const backgroundDiv = document.getElementById('background-div');
+
+let index = 0;
+
+function changeBackground() {
+    index = (index + 1) % backgrounds.length;
+    backgroundDiv.style.backgroundImage = backgrounds[index];
+}
+
+// Call the function to change background at an interval
+setInterval(changeBackground, 5000); // Change background every 5 seconds
+
+
+</script>
+
+
+<div class="container">
+    {% for i in first %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h2>MRP={{ i.price }}</h2></div></a></div>
+    {% endfor %}
+    {% for i in second %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+    {% for i in third %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+    {% for i in forth %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+</div>
+
+<div class="add">
+    <div><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
+    <div><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
+    <div><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
+</div>
+
+
+
+<div style="margin:30px;color:green;text-size:150px;"><h1>New Collection</h1></div>
+
+
+<div class="container2">
+        {% for div in data %}
+            <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
+        {% endfor %}
+    </div>
+
+<div style="margin:30px;color:green;text-size:150px;"><h1>All Collection</h1></div>
+
+<div class="container">
+    {% for i in first %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+    {% for i in second %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+    {% for i in third %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+    {% for i in forth %}
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+    {% endfor %}
+</div>
+<div>
+
+
+</div>
+<footer>
+<div>
+            <h1>Contact Us</h1>
+            <h2>123 Main Street, City, Country</h2>
+            <h3>Email: info@example.com</h3>
+            <h4>Phone: +1234567890</h4>
+        </div>
+</footer>
+
+</body>
+</html>
+
+

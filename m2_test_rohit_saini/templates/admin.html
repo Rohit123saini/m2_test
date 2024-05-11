@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin home page</title>
+
+<link rel="stylesheet" href="/static/css/admin.css">
+
+</head>
+<body>
+<header>
+
+        <div style="display:flex;">
+            <img src="/static/images/logo.png" height=100% width="150px">
+
+        </div>
+    <div>
+
+        {% if  username %}
+        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
+
+        {% endif %}
+    </div>
+        <div class="right_header">
+            <div><a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a></div>
+            <div style="text-align: right;width:100%;"><a href="/create/"><button class="button" style="font-size:25px;margin-top:5px;">Add product</button></a><a href="/admin_panal/orders/"><button style="font-size:25px;background-color:blue;margin:5px;" class="button">Check Order</button></a></div>
+        </div>
+
+</header>
+
+
+
+
+
+
+
+<div class="container">
+  <div class="column">
+      {% for i in second_half %}
+
+      <br>
+      <div class="row">
+      <div class="img"><img src="{{ i.image.url }}" alt="{{ i.name }} image" height="200" width="300"></div>
+      <div><h1 class="h1">{{ i.name }}</h1>
+         <div><a href="/update/{{ i.id }}"> <button class="button">Update</button></a><a href="/delete/{{ i.id }}"><button class="button" style="background-color:red;margin-left:50px">Delete</button></a></div>
+      </div>
+    </div>
+
+{% endfor %}</div>
+
+
+  <div class="column">{% for i in first_half %}
+      <br>
+      <div class="row">
+      <div class="img"><img src="{{ i.image.url }}" alt="{{ i.name }} image" height="200" width="300"></div>
+      <div><h1 class="h1">{{ i.name }}</h1>
+          <div> <a href="/update/{{ i.id }}"><button class="button">Update</button></a><a href="/delete/{{ i.id }}"><button class="button" style="background-color:red;margin-left:50px;">Delete</button></a></div>
+      </div>
+    </div>
+
+{% endfor %}</div>
+</div>
+
+
+</body>
+</html>

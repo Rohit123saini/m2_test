@@ -1,0 +1,66 @@
+
+    /* Table Styles */
+    *{
+    padding:0;
+    margin:0;
+    }
+    .styled-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    header{
+        background-color:#FFEBCD;
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        height: 10vh;
+        width:100%;
+
+        }
+        .right_header{
+        text-align: right;
+        width:100%;
+        }
+    h1{
+    margin-top:100px;
+    font-size:80px;
+    }
+
+      footer{
+    height:300px;
+    width:100%;
+    background-color:#FFEBCD;
+    color: blue;
+            padding: 40px;
+            text-align: center;
+            justify-content:center;
+
+    }

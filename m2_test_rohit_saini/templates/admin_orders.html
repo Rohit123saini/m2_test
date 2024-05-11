@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin orders</title>
+<link rel="stylesheet" href="/static/css/admin_orders.css">
+</head>
+<body>
+
+
+<header>
+
+        <div style="display:flex;">
+            <img src="/static/images/logo.png" height=100% width="150px">
+            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
+        </div>
+    <div>
+
+        {% if  username %}
+        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
+
+        {% endif %}
+    </div>
+        <div class="right_header">
+            <div><a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a></div>
+            <div style="text-align: right;width:100%;margin-top:5px;"><a href="/create/"><button class="button" style="font-size:25px;height=100%;">Add product</button></a><a href="/admin_panal/orders/"><button style="font-size:25px;background-color:blue;margin:5px;" class="button">Check Order</button></a></div>
+        </div>
+
+</header>
+<h1>User Orders</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>USER </th>
+            <th>PRODUCT</th>
+            <th>TOTAL PRICE</th>
+            <th>STATUS</th>
+            <th>ODERED DATE</th>
+            <th>UPDATE STATUS</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in data %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="number" value="{{ i.id }}" name="id" hidden>
+        <tr>
+            <td>{{ i.user }}</td>
+            <td>{{ i.product }}</td>
+            <td>{{ i.total_price }}</td>
+            <td>
+
+            {% if  i.status  == 'cancel' %}
+                <select  name="status">
+            <option value="cancel">cancel</option>
+            <option value="packing">packing</option>
+            <option value="shipping">shipping</option>
+            <option value="delivered">delivered</option>
+                </select>
+                {% elif i.status  == 'packing' %}
+                <select  name="status">
+              <option value="packing">packing</option>
+              <option value="cancel">cancel</option>
+            <option value="shipping">shipping</option>
+            <option value="delivered">delivered</option>
+        </select>
+                {% elif i.status  == 'shipping' %}
+                <select  name="status">
+                     <option value="shipping">shipping</option>
+              <option value="packing">packing</option>
+              <option value="cancel">cancel</option>
+            <option value="delivered">delivered</option>
+        </select>
+                {% else %}
+                <select  name="status">
+                    <option value="delivered">delivered</option>
+              <option value="packing">packing</option>
+              <option value="cancel">cancel</option>
+            <option value="shipping">shipping</option>
+        </select>
+
+            {% endif %}
+            </td>
+            <td>{{ i.ordered }}</td>
+            <td><a><button type="submit">Update</button></a></td>
+        </tr>
+        </form>
+       {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>

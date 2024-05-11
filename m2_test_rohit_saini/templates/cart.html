@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
+<header>
+
+        <div>
+            <img src="/static/images/logo.png" height=100% width="150px">
+        </div>
+    <div>
+
+        {% if  username %}
+        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
+
+        {% endif %}
+    </div>
+        <div class="right_header">
+            <a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a>
+            <a href="/home/orders/"><img src="/static/images/order_status.jpg"  height=100% width="100px"></a>
+
+
+            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
+            <a href="/logout/"><img src="/static/images/logout.png" alt="cart" height=100% width="100px" ></a>
+        </div>
+
+</header>
+<h1 style="margin-top:100px;">Shopping Cart</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product Name</th>
+
+      <th>Quantity</th>
+      <th>Total Price</th>
+        <th>update</th>
+        <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for i in obj %}
+    <tr>
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" value="{{ i.id }}" name="id" hidden>
+      <td>{{ i.product }}</td>
+
+      <td><input type="number" name="quantities" value="{{ i.quantities }}" style="width:70px;"></td>
+      <td>{{ i.total_price }}</td>
+        <td><a href="/home/"><button>Update</button></a></td>
+            </form>
+        <td><a href="/home/cart/delete/{{ i.id }}"><button>Delete</button></a></td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+
+</table>
+
+<a href="/home/checkout/"><button class="checkout-btn">Checkout</button></a>
+
+<footer>
+<div>
+            <h1>Contact Us</h1>
+            <h2>123 Main Street, City, Country</h2>
+            <h3>Email: info@example.com</h3>
+            <h4>Phone: +1234567890</h4>
+        </div>
+</footer>
+
+</body>
+</html>

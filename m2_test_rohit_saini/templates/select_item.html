@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select item</title>
+    <link rel="stylesheet" href="/static/css/select_item.css">
+</head>
+<body>
+<header>
+
+        <div>
+            <img src="/static/images/logo.png" height=100% width="150px">
+        </div>
+    <div>
+
+        {% if  username %}
+        <h1 style="padding:0px;margin:5px;font-size:40px;"><a style="text-decoration:none;"  href="/login/">{{ username }}</a></h1>
+
+        {% endif %}
+    </div>
+        <div class="right_header">
+            <a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a>
+            <a href="/home/orders/"><img src="/static/images/order_status.jpg"  height=100% width="100px"></a>
+            <a href="/home/cart/"><img src="/static/images/basket.png" height=100% width="100px" ></a>
+
+            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
+            <a href="/logout/"><img src="/static/images/logout.png" alt="cart" height=100% width="100px" ></a>
+        </div>
+
+</header>
+
+<div class="item">
+<div>
+    <img src="{{ data.image.url }}/" alt="data.name" height="600" width="700">
+</div>
+    <div class="detail">
+        <form method="post">
+            {% csrf_token %}
+        <h1>{{ data.name }}</h1>
+        <h2>Price={{ data.price }}</h2>
+            <h2>Details</h2>
+        <h3>{{ data.description }}</h3>
+        <h4>Quantity</h4>
+            {% if data.quantity < 1 %}
+            <h3>Out of stoke</h3>
+            {% else %}
+        <input type="number" name="quantity" min="0" style="width:100px; font-size:44px" required><br><p></p>
+            {% endif %}
+        <div style="display:flex;"><div><button STYLE="font-size:30px;height:60px;">ADD TO CART</button>
+            {% if error %}
+            <p style="color:red;">{{ error }}</p>
+            {% endif %}
+
+
+
+
+        </div></div></form>
+    </div>
+    <div class="container1">
+
+            <div class="div-item1"><img src="{{ data.image.url }}" height="300px" width="300px"></div>
+
+
+    </div>
+</div>
+
+
+<div class="container2">
+        {% for div in data2 %}
+            <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
+        {% endfor %}
+    </div>
+<div class="add">
+    <div><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
+    <div><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
+    <div><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
+</div>
+<div class="container2">
+        {% for div in data3 %}
+            <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
+        {% endfor %}
+    </div>
+
+
+<footer>
+<div>
+            <h1>Contact Us</h1>
+            <h2>123 Main Street, City, Country</h2>
+            <h3>Email: info@example.com</h3>
+            <h4>Phone: +1234567890</h4>
+        </div>
+</footer>
+
+
+</body>
+</html>
