@@ -60,8 +60,9 @@
         position: fixed;
         top: 0;
         z-index: 999;
-        height: 10vh;
+        height: 7vh;
         width:100%;
+        text-align:center;
 
         }
         .right_header{

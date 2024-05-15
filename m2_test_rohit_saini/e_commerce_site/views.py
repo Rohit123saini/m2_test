@@ -334,8 +334,8 @@ class checkout(View):
 
                 subject1 = 'Order Confirmation'
                 subject2='New Order'
-                message1 = f'Thank you for your order! Your order has been successfully placed.orders id_s={ li }'
-                message2 = f'New order will be added by { request.user }'
+                message1 = f'Thank you for your order! Your order has been successfully placed.orders id_s={ li }.'
+                message2 = f'New order will be added by { request.user }.https://www.apple.com/in/'
                 email_from = settings.EMAIL_HOST_USER
                 recipient_list1 = [usr.email]
                 recipient_list2 = superusers_email

@@ -160,4 +160,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'rohit6398.iimt@gmail.com'
-EMAIL_HOST_PASSWORD = 'XXXX XXXX XXXX XXXX'
+EMAIL_HOST_PASSWORD = 'uxls lqdv zsay hthl'

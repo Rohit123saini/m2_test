@@ -7,25 +7,7 @@
     <link rel="stylesheet" href="/static/css/create_product.css">
 </head>
 <body>
-<header>
 
-        <div style="display:flex;">
-            <img src="/static/images/logo.png" height=100% width="150px">
-            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
-        </div>
-    <div>
-
-        {% if  username %}
-        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
-
-        {% endif %}
-    </div>
-        <div class="right_header">
-            <div><a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a></div>
-            <div style="text-align: right;width:100%;margin-top:5px;"><a href="/create/"><button class="button" style="font-size:25px;height=100%;">Add product</button></a><a href="/admin_panal/orders/"><button style="font-size:25px;background-color:blue;margin:5px;" class="button">Check Order</button></a></div>
-        </div>
-
-</header>
     <div class="container">
         <h2>Create a New Product</h2>
         <form method="post"  enctype="multipart/form-data">

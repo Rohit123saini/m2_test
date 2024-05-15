@@ -1,4 +1,7 @@
-
+   *{
+margin:0px;
+padding:0px;
+}
 
         .item{
         margin-top:80px;
@@ -14,10 +17,11 @@
         position: fixed;
         top: 0;
         z-index: 999;
-        height: 10vh;
+        height: 7vh;
         width:100%;
         margin:0;
         padding:0;
+        text-align:center;
 
         }
         .right_header{
@@ -25,38 +29,35 @@
         width:100%;
         }
 
-        .container2 {
+         .container2 {
             width: 100%;
             max-height: 400px; /* Set maximum height */
             overflow-y: auto; /* Add vertical scrollbar when content overflows */
             border: 1px solid #ccc;
-            padding: 10px;
+            padding: 0px;
             display:flex;
             background-color:#FFEBCD;
-        }
-        .div-item {
-            margin-bottom: 10px;
-            padding: 5px;
-            border: 1px solid #eee;
-            background-color: #F0FFFF;
 
         }
-        h1{
-        font-size:60px;
+        .div-item {
+            margin: 10px;
+            padding: 1px;
+            border: 1px solid #eee;
+            background-color: #F0FFFF;
+            border-radius:15px;
+
         }
-        h2{
-        font-size:40px;
+        .div-item img{
+        border-radius:15px;
         }
-        h4{
-        font-size:30px;
-        }
+
         .container1 {
             width: 500px;
             max-height: 400px; /* Set maximum height */
             overflow-y: auto; /* Add vertical scrollbar when content overflows */
             border: 1px solid #ccc;
-            padding: 10px;
-            height:1000px;
+
+            height:100px;
             background-color:#FFEBCD;
         }
         .div-item1 {
@@ -71,14 +72,11 @@ display:flex;
 width:100%;
 margin:40px;
 }
-
-          footer{
-    height:300px;
-    width:100%;
-    background-color:#FFEBCD;
-    color: blue;
-            padding: 40px;
+ footer {
+            height: 300px;
+            width: 100%;
+            background-color: #FFEBCD;
+            color: blue;
             text-align: center;
-            justify-content:center;
-
-    }
+            padding-top: 50px;
+        }

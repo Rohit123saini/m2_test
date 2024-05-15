@@ -10,20 +10,23 @@
 
 <header>
 
-        <div style="display:flex;">
-            <img src="/static/images/logo.png" height=100% width="150px">
-            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
+        <div style=" justifyContent: center; alignItems: center;text-align:center;" >
+            <a href="/home/"><i style="font-size: 6vh;color:red;" class="fa-solid fa-house" ></i></a>
         </div>
     <div>
 
         {% if  username %}
-        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
+        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
 
         {% endif %}
     </div>
         <div class="right_header">
-            <div><a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a></div>
-            <div style="text-align: right;width:100%;margin-top:5px;"><a href="/create/"><button class="button" style="font-size:25px;height=100%;">Add product</button></a><a href="/admin_panal/orders/"><button style="font-size:25px;background-color:blue;" class="button">Check Order</button></a></div>
+            <a href="/home/orders/"><i style="font-size: 6vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 6vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
+
+            <a href="/admin_panal/"><i style="font-size: 6vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
+            <a href="/logout/"><i style="font-size: 6vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
+
         </div>
 
 </header>

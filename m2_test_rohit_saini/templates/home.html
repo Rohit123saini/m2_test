@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>home</title>
-       <link rel="stylesheet" href="/static/css/home.css">
+
+   <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="/static/css/home.css">
+
 </head>
 <body>
 <header>
 
-        <div>
-            <img src="/static/images/logo.png" height=100% width="150px">
+        <div style=" justifyContent: center; alignItems: center;text-align:center;" >
+            <a href="/home/"><i style="font-size: 6vh;color:red;" class="fa-solid fa-house" ></i></a>
         </div>
     <div>
 
@@ -19,11 +22,11 @@
         {% endif %}
     </div>
         <div class="right_header">
-            <a href="/home/orders/"><img src="/static/images/order_status.jpg" alt="orders" height=100% width="100px"></a>
-            <a href="/home/cart/"><img src="/static/images/basket.png" alt="cart" height=100% width="100px" ></a>
+            <a href="/home/orders/"><i style="font-size: 6vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 6vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
 
-            <a href="/admin_panal/"><img src="/static/images/admin_login.png" alt="admin" height=100% width="100px"></a>
-            <a href="/logout/"><img src="/static/images/logout.png" alt="cart" height=100% width="100px" ></a>
+            <a href="/admin_panal/"><i style="font-size: 6vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
+            <a href="/logout/"><i style="font-size: 6vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
 
         </div>
 
@@ -57,26 +60,25 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 </script>
 
-
 <div class="container">
     {% for i in first %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h2>MRP={{ i.price }}</h2></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
 </div>
 
 <div class="add">
-    <div><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
-    <div><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
-    <div><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
+    <div class="add_image"><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
+    <div class="add_image"><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
+    <div class="add_image"><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
 </div>
 
 
@@ -94,16 +96,16 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 <div class="container">
     {% for i in first %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex;justify-content:space-between;padding:15px;"><h1>{{ i.name }}</h1><h1>MRP={{ i.price }}</h1></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
 </div>
 <div>

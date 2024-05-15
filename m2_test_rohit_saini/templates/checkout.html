@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
     <link rel="stylesheet" href="/static/css/checkout.css">
+    <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <header>
 
-        <div>
-            <img src="/static/images/logo.png" height=100% width="150px">
+        <div style=" justifyContent: center; alignItems: center;text-align:center;" >
+            <a href="/home/"><i style="font-size: 6vh;color:red;" class="fa-solid fa-house" ></i></a>
         </div>
     <div>
 
         {% if  username %}
-        <h2 style="padding:12px;font-size:35px;margin:0px;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h2>
+        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
 
         {% endif %}
     </div>
         <div class="right_header">
-            <a href="/home/"><img src="/static/images/home.jpg"  height=100% width="100px"></a>
-            <a href="/home/orders/"><img src="/static/images/order_status.jpg"  height=100% width="100px"></a>
+            <a href="/home/orders/"><i style="font-size: 6vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 6vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
 
-            <a href="/home/cart/"><img src="/static/images/basket.png" height=100% width="100px" ></a>
+            <a href="/admin_panal/"><i style="font-size: 6vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
+            <a href="/logout/"><i style="font-size: 6vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
 
-            <a href="/admin_panal/"><img src="/static/images/admin_login.png" height=100% width="100px"></a>
-            <a href="/logout/"><img src="/static/images/logout.png" alt="cart" height=100% width="100px" ></a>
         </div>
 
 </header>
