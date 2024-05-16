@@ -42,21 +42,21 @@ padding:0;
     <div class="detail">
         <form method="post">
             {% csrf_token %}
-      <br>  <h1>{{ data.name }}</h1><br>
-        <h2>Price={{ data.price }}</h2><br>
-            <h2>Details</h2><br>
-        <h3>{{ data.description }}</h3><br>
-        <h4>Quantity</h4><br>
+      <br>  <h1 style="margin-top:40px;font-size:55px;">{{ data.name }}</h1><br>
+        <h2 style="font-size:40px;">Price={{ data.price }}</h2><br>
+            <h2 style="font-size:30px;">Details</h2><br>
+        <h3 style="font-size:20px;">{{ data.description }}</h3><br><br>
+        <h4 style="font-size:30px;">Quantity</h4><br>
             {% if data.quantity < 1 %}
             <h3>Out of stoke</h3><br>
             {% else %}
 
-        <input type="number" name="quantity" min="1" value="1" max="10" style="width:100px; font-size:44px" required><br><p></p><br>
+        <input type="number" name="quantity" min="1" value="1" max="10" style="width:80px; font-size:44px;border-radius:20px;"  required><br><p></p><br>
 
 
 
             {% endif %}
-        <div style="display:flex;"><div><button STYLE="font-size:30px;height:60px;">ADD TO CART</button><br>
+        <div style="display:flex;"><div><button STYLE="font-size:30px;height:60px;width:250px;background-color: #ffb380;border-radius:20px;">ADD TO CART</button><br>
             {% if error %}
             <p style="color:red;">{{ error }}</p>
             {% endif %}
