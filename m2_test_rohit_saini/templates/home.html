@@ -16,9 +16,10 @@
         </div>
     <div>
 
-        {% if  username %}
+        {% if  username == 'Login' %}
         <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
-
+        {% else %}
+        <h1 style="padding:12px;">{{ username }}</h1>
         {% endif %}
     </div>
         <div class="right_header">
@@ -62,6 +63,7 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 <div class="container">
     {% for i in first %}
+
    <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in second %}
@@ -113,11 +115,11 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 </div>
 <footer>
-<div>
+<div style="width:98%;height:90%;align-items:center;background-color:#99ddff;border-radius:30px;justify-content:center;padding-top:2%;">
             <h1>Contact Us</h1>
-            <h2>123 Main Street, City, Country</h2>
-            <h3>Email: info@example.com</h3>
-            <h4>Phone: +1234567890</h4>
+            <h2>123 Main Street, City, Country</h2><br>
+            <h3>Email: info@example.com</h3><br>
+            <h4>Phone: +1234567890</h4><br>
         </div>
 </footer>
 

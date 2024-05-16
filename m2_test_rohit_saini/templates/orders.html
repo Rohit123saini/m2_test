@@ -15,9 +15,10 @@
         </div>
     <div>
 
-        {% if  username %}
-        <h10 style="padding:12px;font-size:30px;font-family:bold;"><a style="text-decoration:none;" href="/login/">{{ username }}</a></h10>
-
+       {% if  username == 'Login' %}
+        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
+        {% else %}
+        <h1 style="font-size:30px;margin-top:0">{{ username }}</h1>
         {% endif %}
     </div>
         <div class="right_header">
@@ -33,7 +34,7 @@
 
 <h1>My Orders</h1>
 
-<table class="styled-table" style="min-height:200px;">
+<table class="styled-table" style="min-height:1000px;">
     <thead>
         <tr>
             <th>PRODUCT</th>
@@ -57,7 +58,7 @@
 </table>
 
 <footer>
-<div>
+<div style="width:98%;height:90%;align-items:center;background-color:#99ddff;border-radius:30px;justify-content:center;padding-top:2%;">
             <h1>Contact Us</h1>
             <h2>123 Main Street, City, Country</h2>
             <h3>Email: info@example.com</h3>

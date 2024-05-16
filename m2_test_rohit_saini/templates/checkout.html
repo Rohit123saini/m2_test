@@ -15,10 +15,10 @@
             <a href="/home/"><i style="font-size: 6vh;color:red;" class="fa-solid fa-house" ></i></a>
         </div>
     <div>
-
-        {% if  username %}
+        {% if  username == 'Login' %}
         <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
-
+        {% else %}
+        <h1 style="padding:12px;">{{ username }}</h1>
         {% endif %}
     </div>
         <div class="right_header">
