@@ -134,7 +134,7 @@ class home(View):
             'forth':forth,
             'data':ob[::-1],
             'username':user,
-            'circle':ob[:5]
+            'circle':ob[3:8]
         }
 
 

@@ -7,12 +7,12 @@
    <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="/static/css/home.css">
 <style>
+
     .nav{
     width:100%;
       display: flex;
 
-    background-color:white;
-
+   background-color:#99ddff
 
     }
     .add_image1{
@@ -23,6 +23,10 @@
     overflow:hidden;
     border:solid 2px;
     border-color:#330000;
+
+    }
+    .add_image1 img{
+    margin:0px;
     }
 </style>
 </head>
@@ -99,7 +103,7 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
     {% endfor %}
 </div>
 
-<div class="add" style="background-color:#ffcccc">
+<div class="add" style="background-color:#99ddff">
     <div class="add_image"><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
@@ -107,7 +111,7 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 
 
-<div style="margin:30px;color:green;text-size:150px;"><h1>New Collection</h1></div>
+<div style="color:red;"><h1 style="text-size:50px;margin:30px;">New Collection</h1></div>
 
 
 <div class="container2">
@@ -125,7 +129,7 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 
 
-<div style="margin:30px;color:green;text-size:150px;"><h1>All Collection</h1></div>
+<div style="margin:30px;color:red;"><h1 style="text-size:50px;" >All Collection</h1></div>
 
 <div class="container">
     {% for i in first %}
@@ -146,7 +150,7 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 </div>
 <footer>
-<div style="width:98%;height:90%;align-items:center;background-color:#99ddff;border-radius:30px;justify-content:center;padding-top:2%;">
+<div style="width:98%;height:90%;align-items:center;background-color:#99ddff;border-radius:30px;justify-content:center;padding-top:2%;background-image;">
             <h1>Contact Us</h1>
             <h2>123 Main Street, City, Country</h2><br>
             <h3>Email: info@example.com</h3><br>
