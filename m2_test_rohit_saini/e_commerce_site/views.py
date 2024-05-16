@@ -36,6 +36,7 @@ def create(request):
             isinstance = product_management(name=name, description=description, price=price, quantity=quantity,
                                             image=image)
             isinstance.save()
+            return redirect('admin')
         return render(request, 'create_product.html')
 
     except Exception as e:
@@ -113,7 +114,7 @@ def signup(request):
 class home(View):
     def get(self,request):
         ob=product_management.objects.all()
-        obj=ob[:12]
+        obj=ob[:12:-1]
         total_items = len(obj)
         half_index = total_items // 2
         f = obj[:half_index]
@@ -131,7 +132,7 @@ class home(View):
             'second': second,
             'third':third,
             'forth':forth,
-            'data':obj,
+            'data':ob[::-1],
             'username':user
         }
 
