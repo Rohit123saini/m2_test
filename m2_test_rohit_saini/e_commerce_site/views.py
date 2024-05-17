@@ -349,6 +349,9 @@ class checkout(View):
             return redirect('orders')
         except Exception as e:
             return HttpResponse(e)
+
+        finally:
+            return redirect('orders')
 def orders(request):
     try:
         if not request.user.is_authenticated:
