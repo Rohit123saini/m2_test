@@ -8,64 +8,274 @@
  <link rel="stylesheet" href="/static/css/home.css">
 <style>
 
-    .nav{
-    width:100%;
-      display: flex;
 
-   background-color:#99ddff
+        *{
+        padding:0px;
+        margin:0px;
 
-    }
-    .add_image1{
-    height:210px;
-    width:17%;
-    margin:3%;
-    border-radius:50%;
+        }
+        header{
+        align-items: center;
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        height: 7vh;
+        opacity: 1px;
+        width:100%;
+        text-align:center;
+        <background-color:transparent;
+        justify-content:space-around;
+        }
+        .scroll-bg {
+  background-color: #333;
+}
+
+  .container {
+    background-color:white
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to next row */
+    justify-content: flex-start; /* Start from left */
+    align-items: flex-start; /* Start from top */
+    width: 95%; /* Set a width for the container */
+    padding-top:10px;
+    transition: border-color 0.3s;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.item {
+    width: calc(25% - 40px); /* Set a width for each item (minus margins) */
+    height: 43vh; /* Set a fixed height for each item */
+    border: 3px solid rgb(26,186,95) ; /* Just for visualization */
+    margin: 20px; /* Add some margin between items */
+    box-sizing: border-box; /* Include border and padding within width and height */
+
+    border-radius: 15px;
     overflow:hidden;
-    border:solid 2px;
-    border-color:#330000;
+    z-index:1;
+}
+.item img {
+
+
+    display: block; /* Remove default inline styling */
+    border-radius: 15px; /* Add rounded corners to the image */
+}
+.item:hover {
+    border-color: red;
+}
+        h1{
+        color:0000FF;
+        text-decoration:None;
+        font-weight: bold;
+        }
+        a{
+        text-decoration:None;
+        }
+
+.notes{
+ height:80px
+ text-alignment:center;
+ justify-content:center;
+ }
+
+
+        .con2{
+        display:flex;
+        text-align:center;
+        align-items:center;
+        }
+
+
+        .container2 {
+            width: 94%;
+            height: 40vh;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 0px;
+            display:flex;
+            margin-top:40px;
+            margin-bottom:40px;
+            background-color:white;
+            padding-right:40px;
+            border:10px solid #1aa3ff;
+            border-radius:10px;
+            scrollbar-width: none;
+        }
+        .div-item {
+            margin: 10px;
+            padding: 1px;
+           height:38vh;
+
+            border-radius:15px;
+
+        }
+        .div-item img{
+        border-radius:15px;
+        }
+
+        #background-div {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.1s ease-in-out;
+    display: flex;
+    position:stickey;
+    align-items: center;
+    border-radius:50px;
+
+
+
+}
+
+        footer{
+        display:flex;
+    height:300px;
+    width:100%;
+
+    color: blue;
+            padding: 0px;
+            text-align: center;
+            justify-content:center;
+            align-items:center;
 
     }
-    .add_image1 img{
-    margin:0px;
+.add{
+display:flex;
+width:96%;
+margin:30px;
+border:10px solid red;
+border-radius:40px;
+background:linear-gradient(red,yellow)
+
+}
+.add_image{
+width=35%;
+margin:40px;
+border-radius:30px;
+}
+.add_image img{
+border-radius:30px;
+}
+h7{
+font-size:40px;
+margin-left:100px;
+}
+.right_header{
+        text-align: right;
+        width:100%;
+        }
+h1{
+font-style: oblique;
+}
+    .product{
+    display:flex;
+    width:95%;
+    border:10px solid;
+    margin:50px;
+    border-color:red;
+    border-radius:15px;
+    }
+    .desc{
+    width:50%;
+    text-align:center;
+    align-items:center;
+    height:50vh;
+   margin-left:20px;
+   margin-right:20px;
+   overflow:hidden;
+   margin-top:20px;
+    }
+    .imgg{
+    width:50%;
+    height:52vh;
+    overflow:hidden;
+    border-radius:15px;
+    }
+h10{
+font-size:70px;
+font-family:URW Chancery L, cursive;
+color:#6a00b3;
+}
+    p2{
+    font-size:40px;
+font-family:URW Chancery L, cursive;
+color:#009935;
+    }
+    h11{
+    font-size:70px;
+    color:#7900cc;
+    font-family:URW Chancery L, cursive;
+    margin-left:50px;
+    }
+    .hd{
+    height:10vh;
+
+    border-radius:40px;
+    margin-left:10px;
+    margin-right:10px;
+
+    }
+    .products{
+    width:98%;
+    display:flex;
+
+    }
+    .con1{
+    width:33%;
+    height:80vh;
+    border:10px solid #a83246;
+    margin:40px;
+    border-radius:40px;
+    overflow:hidden;
     }
 </style>
 </head>
 <body>
-<header>
 
-        <div style=" justifyContent: center; alignItems: center;text-align:center;" >
+<header id="header">
+
+
+        <div style=" justifyContent: center; alignItems: center;text-align:center;padding-left:15px;" >
             <a href="/home/"><i style="font-size: 6vh;color:red;" class="fa-solid fa-house" ></i></a>
         </div>
     <div>
 
         {% if  username == 'Login' %}
-        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
+        <h1 style="padding:15px;"><a href="/login/">{{ username }}</a></h1>
         {% else %}
-        <h1 style="padding:12px;">{{ username }}</h1>
+        <h1 style="padding:15px;">{{ username }}</h1>
         {% endif %}
     </div>
         <div class="right_header">
-            <a href="/home/orders/"><i style="font-size: 6vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
-            <a href="/home/cart/"><i style="font-size: 6vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
+            <a href="/home/orders/"><i style="font-size: 6vh;color:#ff3333;padding-left:20px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 6vh;color:#ff0000;padding-left:20px;" class="fa-solid fa-cart-plus"></i></a>
 
-            <a href="/admin_panal/"><i style="font-size: 6vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
-            <a href="/logout/"><i style="font-size: 6vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/admin_panal/"><i style="font-size: 6vh;color:#b30000;padding-left:20px;" class="fa-solid fa-user-tie"></i></a>
+            <a href="/logout/"><i style="font-size: 6vh;color:#800000;padding-left:20px;" class="fa-solid fa-right-from-bracket"></i></a>
 
         </div>
 
 </header>
 
-<div id="background-div" >
-        <h7>At kittu, we're dedicated to providing you with the<br>
-    best products to enhance your life. Whether you're looking<br>
-  for innovative gadgets, stylish accessories, or practical tools,<br>
-   we have something for everyone.</h7>
+<div id="background-div" style="height:90vh;">
+
+    <div>
+    <h style="margin-left:10vh;font-size:70px;font-family:Snell Roundhand, cursive;color:#cc0000">ShopLuxe 👜</h>
+        <p style="font-family:Cursive;font-size:40px;width:110vh;margin-left:10vh;color:#00004d"><br>🛒🛒At kittu, we're dedicated to providing you with the
+    best products to enhance your life. Whether you're looking
+  for innovative gadgets, stylish accessories, or practical tools,
+   we have something for everyone.🛒🛒</p></div>
+
+
     </div>
+
 <script>
     const backgrounds = [
-     'url(https://t3.ftcdn.net/jpg/02/41/43/18/360_F_241431868_8DFQpCcmpEPVG0UvopdztOAd4a6Rqsoo.jpg)',
-    'url(https://st3.depositphotos.com/5444644/15662/i/450/depositphotos_156628490-stock-photo-woman-holding-colorful-shopping-bags.jpg)',
-    'url(https://t4.ftcdn.net/jpg/02/32/16/07/360_F_232160763_FuTBWDd981tvYEJFXpFZtolm8l4ct0Nz.jpg)',
+    'url(https://getitsms.com/wp-content/uploads/blog-bulk-03.webp)',
+    'url(https://imageio.forbes.com/specials-images/dam/imageserve/1117416068/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds)',
+    'url(https://www.spindustry.com/userdocs/news/3-privacy-compliance.jpg)',
 ];
 
 const backgroundDiv = document.getElementById('background-div');
@@ -78,32 +288,56 @@ function changeBackground() {
 }
 
 // Call the function to change background at an interval
-setInterval(changeBackground, 5000); // Change background every 5 seconds
+setInterval(changeBackground, 2000); // Change background every 5 seconds
+
 
 
 </script>
 
+ <script>
+        window.addEventListener('scroll', function() {
+    var div = document.getElementById('header');
+    var scrollPosition = window.scrollY;
+
+    // Change color based on scroll position
+    if (scrollPosition > 500) {
+        div.style.backgroundColor = '#FFEBCD';
+    } else {
+        div.style.backgroundColor = 'transparent';
+    }
+});
+
+    </script>
+<div class="product">
+    <div class="desc">
+       <h10>ABOUT US<br></h10>
+        <p2>Our cups are meticulously crafted using premium materials, ensuring durability and a superior drinking experience. From elegant ceramic mugs to sleek stainless steel tumblers, each cup in our collection is designed to meet the highest standards of performance and aesthetics.🍵🍵🍵</p2>
+    </div>
+    <div class="imgg">
+        <a href="/home/select_item/1"><img src="/static/images/cups.jpg" height="100%" width=100%></a>
+    </div>
 
 
+</div>
+<div class="hd"><h11>Daily collection 🛒🛒</h11></div>
 
-
-<div class="container">
+<div class="container" style="background:white;display:flex;">
     {% for i in first %}
 
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
 </div>
 
-<div class="add" style="background-color:#99ddff">
+<div class="add">
     <div class="add_image"><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
@@ -111,44 +345,74 @@ setInterval(changeBackground, 5000); // Change background every 5 seconds
 
 
 
-<div style="color:red;"><h1 style="text-size:50px;margin:30px;">New Collection</h1></div>
+<div class="hd" style="padding-top:20px;"><h11>New collection 🛒🛒</h11></div>
 
-
+<div class="con2">
+    <div> <button class="scroll-left" style="font-size:70px;height:20vh;border-radius:50px;"><strong><</strong></button></div>
 <div class="container2">
         {% for div in data %}
-            <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
+            <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height=100% width="400px"></a></div>
         {% endfor %}
     </div>
 
+    <div><button class="scroll-right" style="font-size:70px;height:20vh;border-radius:50px;"><strong>></strong></button></div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.container2');
+    const scrollLeftButton = document.querySelector('.scroll-left');
+    const scrollRightButton = document.querySelector('.scroll-right');
 
-<div class="nav">
-    {% for i in circle %}
-    <div class="add_image1"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}" height=100% width=100% ></a></div>
-    {% endfor %}
+    scrollLeftButton.addEventListener('click', function() {
+        container.scrollBy({
+            left: -500, // Adjust the scroll amount as needed
+            behavior: 'smooth' // Optional: Smooth scrolling
+        });
+    });
+
+    scrollRightButton.addEventListener('click', function() {
+        container.scrollBy({
+            left: 500, // Adjust the scroll amount as needed
+            behavior: 'smooth' // Optional: Smooth scrolling
+        });
+    });
+});
+</script>
+
+
+<div class="products" style="display: flex; ">
+    {% for i in pro %}
+   <div class="con1" style="height:75vh;">
+       <div class="desc1" style="height:60vh,text-align:center,justify-content:center;overflow:hidden;text-align:center;">
+       <h10 style="font-size:50px;">{{ i.name }}<br></h10>
+        <p2 style="font-size:30px;">{{ i.description }}</p2>
+        </div>
+
+       <div class="imgg" style="height:40vh;width:100%;">
+        <a href="/home/select_item/1"><img src="{{ i.image.url }}" height=100% width=100%></a>
+        </div>
+
+    </div>
+{% endfor %}
 </div>
 
-
-
-<div style="margin:30px;color:red;"><h1 style="text-size:50px;" >All Collection</h1></div>
-
-<div class="container">
+<div class="hd"><h11>All collection 🛒🛒</h11></div>
+<div class="container" style="background:white;display:flex;">
     {% for i in first %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height="300" width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:100px;border-radius:30px;background-color:Tomato;height:30px;">Add to Cart</button></div></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div><button style="margin-right:10px;font-size:15px;width:120px;border-radius:30px;height:40px;background-color:#00cc66;color:red;">Add to Cart</button></div></div></a></div>
     {% endfor %}
 </div>
-<div>
 
-
-</div>
 <footer>
 <div style="width:98%;height:90%;align-items:center;background-color:#99ddff;border-radius:30px;justify-content:center;padding-top:2%;background-image;">
             <h1>Contact Us</h1>

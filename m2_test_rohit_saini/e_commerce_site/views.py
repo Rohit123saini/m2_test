@@ -114,7 +114,7 @@ def signup(request):
 class home(View):
     def get(self,request):
         ob=product_management.objects.all()
-        obj=ob[:12:-1]
+        obj=ob[:12]
         total_items = len(obj)
         half_index = total_items // 2
         f = obj[:half_index]
@@ -134,7 +134,8 @@ class home(View):
             'forth':forth,
             'data':ob[::-1],
             'username':user,
-            'circle':ob[3:8]
+            'circle':ob[3:8],
+            'pro':ob[1:4],
         }
 
 
