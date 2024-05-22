@@ -7,6 +7,10 @@ padding:0px;
         margin-top:7vh;
         display:flex;
         }
+        @media (min-width: 800px){.item{
+        margin-top:7vh;
+        display:grid;
+        }}
         .detail{
         width:800px;
         margin:10px;
@@ -81,11 +85,42 @@ border-radius:30px;
 .add_image img{
 border-radius:30px;
 }
- footer {
-            height: 300px;
-            width: 100%;
-            background-color: #FFEBCD;
-            color: blue;
-            text-align: center;
-            padding-top: 50px;
-        }
+.footer {
+    background-color: #FFEBCD;
+    color: red;
+    padding: 50px 0;
+}
+
+.footer h2 {
+    color: red;
+}
+
+.footer p, .footer ul {
+    color: red;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+    font-size:25px;
+}
+
+.footer ul li a {
+    color: red;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        text-align: center;
+    }
+}
