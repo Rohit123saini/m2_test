@@ -149,7 +149,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
-
+LOGIN_REDIRECT_URL = '/home/'
 
 
 STATICFILES_DIRS = [

@@ -64,16 +64,16 @@
 
  .footer {
     background-color: #FFEBCD;
-    color: red;
+    color: black;
     padding: 50px 0;
 }
 
 .footer h2 {
-    color: red;
+    color: black;
 }
 
 .footer p, .footer ul {
-    color: red;
+    color: black;
 }
 
 .footer ul {
@@ -87,12 +87,12 @@
 }
 
 .footer ul li a {
-    color: red;
+    color: black;
     text-decoration: none;
 }
 
 .footer ul li a:hover {
-    color: red;
+    color: black;
     text-decoration: underline;
 }
 
@@ -105,5 +105,4 @@
 font-size:70px;
 
 }
-
 

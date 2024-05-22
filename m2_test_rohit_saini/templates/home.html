@@ -6,6 +6,10 @@
 
    <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <style>
 
 
@@ -19,52 +23,37 @@
         display: flex;
         position: fixed;
         top: 0;
-        z-index: 999;
+        z-index:100;
         height: 7vh;
-        opacity: 1px;
+        overflow:hidden;
         width:100%;
         text-align:center;
-        <background-color:transparent;
+        background-color:#FFEBCD;
         justify-content:space-around;
         }
-        .scroll-bg {
-  background-color: #333;
-}
 
-  .container {
+
+  .container11 {
     background-color:white
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to next row */
     justify-content: flex-start; /* Start from left */
     align-items: flex-start; /* Start from top */
-    width: 80%; /* Set a width for the container */
-
+    width: 95%; /* Set a width for the container */
+     height:100%;
     transition: border-color 0.3s;
-
+       margin:50px;
     align-item:center;
     text-align:center;
     justify-content:center;
 }
-@media (min-width: 700px){
-.container {
-background-color:white
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 86%;
-    margin-left:8%;
-    margin-right:8%;
-    transition: border-color 0.3s;
-
-    align-item:center;
-    text-align:center;
-    justify-content:center;
-}}
+<!--@media (max-width: 700px){.img22 img{-->
+<!--height:75px;-->
+<!--width:150px;-->
+<!--}}-->
 .item {
     width: calc(25% - 40px); /* Set a width for each item (minus margins) */
-    height: 35vh; /* Set a fixed height for each item */
+    height: 40vh; /* Set a fixed height for each item */
 
     margin: 20px; /* Add some margin between items */
     box-sizing: border-box; /* Include border and padding within width and height */
@@ -75,7 +64,7 @@ background-color:white
 }
 @media (min-width: 700px){.item{
 width: calc(25% - 40px); /* Set a width for each item (minus margins) */
-    height: 35vw; /* Set a fixed height for each item */
+    height: 40vw; /* Set a fixed height for each item */
 
     margin: 20px; /* Add some margin between items */
     box-sizing: border-box; /* Include border and padding within width and height */
@@ -83,6 +72,9 @@ width: calc(25% - 40px); /* Set a width for each item (minus margins) */
 
     overflow:hidden;
     z-index:1;
+}}
+@media (min-width: 700px){.item img{
+height:70%
 }}
 .item img {
 
@@ -95,7 +87,7 @@ width: calc(25% - 40px); /* Set a width for each item (minus margins) */
     transform: scale(1.1);
 }
         h1{
-        color:0000FF;
+        color:black;
         text-decoration:None;
         font-weight: bold;
         }
@@ -118,7 +110,7 @@ width: calc(25% - 40px); /* Set a width for each item (minus margins) */
 
 
         .container2 {
-            width: 94%;
+            width: 96%;
             height: 45vh;
             overflow-y: auto;
 
@@ -132,20 +124,34 @@ width: calc(25% - 40px); /* Set a width for each item (minus margins) */
             border-radius:10px;
             scrollbar-width: none;
         }
+
         .div-item {
             margin: 10px;
             padding: 1px;
            height:43vh;
-
+            min-width:400px;
             border-radius:15px;
 
         }
         .div-item img{
         border-radius:15px;
+        min-width:400px;
         }
 
+ @media (max-width: 1000px){.div-item{
+ margin: 10px;
+            padding: 1px;
+           height:40vh;
+            width:400px;
+            margin:50px;
+            border-radius:15px;
 
-
+ }}
+@media (max-width: 1000px){.div-item img{
+        border-radius:15px;
+        min-width:400px;
+        height:25vh;
+        }}
 
 .add{
 display:flex;
@@ -212,14 +218,14 @@ color:#009935;
 
     h11{
     font-size:55px;
-    color:#7900cc;
+    color:black;
     padding-top:50px;
 
     margin-left:50px;
     }
      @media (max-width: 800px){h11{
     font-size:40px;
-    color:#7900cc;
+    color:black;
     }}
 
     .hd{
@@ -231,7 +237,7 @@ color:#009935;
 
     }
     .products{
-    width:98%;
+    width:97%;
     display:flex;
 
     }
@@ -246,16 +252,17 @@ color:#009935;
 
 .footer {
     background-color: #FFEBCD;
-    color: red;
+    color: black;
     padding: 50px 0;
+    height:400px;
 }
 
 .footer h2 {
-    color: red;
+    color: black;
 }
 
 .footer p, .footer ul {
-    color: red;
+    color: black;
 }
 
 .footer ul {
@@ -269,12 +276,13 @@ color:#009935;
 }
 
 .footer ul li a {
-    color: red;
+    color: black;
     text-decoration: none;
+    font-size:15px;
 }
 
 .footer ul li a:hover {
-    color: red;
+    color: black;
     text-decoration: underline;
 }
 
@@ -283,8 +291,13 @@ color:#009935;
         text-align: center;
     }
 }
-
-
+h3{
+color:black;
+}
+h5{
+color:black;
+font-size:15px;
+}
 </style>
 </head>
 <body>
@@ -292,15 +305,15 @@ color:#009935;
 <header id="header">
 
 
-        <div style=" justifyContent: center; alignItems: center;text-align:center;padding-left:15px;" >
-            <a href="/home/"><i style="font-size: 4vh;color:red;" class="fa-solid fa-house" ></i></a>
+        <div class="img22" style=" justifyContent: center; alignItems: center;text-align:center;height=100%;" >
+            <a href="/home/"><img src="/static/images/logo.png"  width="120px"></a>
         </div>
     <div>
 
         {% if  username == 'Login' %}
-        <h1 style="padding:15px;"><a href="/login/">{{ username }}</a></h1>
+        <h2 style="padding:5px;"><a href="/login/">{{ username }}</a></h2>
         {% else %}
-        <h1 style="padding:15px;">{{ username }}</h1>
+        <h2 style="padding:5px;">{{ username }}</h2>
         {% endif %}
     </div>
         <div class="right_header">
@@ -308,53 +321,64 @@ color:#009935;
             <a href="/home/cart/"><i style="font-size: 4vh;color:#ff0000;padding-left:20px;" class="fa-solid fa-cart-plus"></i></a>
 
             <a href="/admin_panal/"><i style="font-size: 4vh;color:#b30000;padding-left:20px;" class="fa-solid fa-user-tie"></i></a>
-            <a href="/logout/"><i style="font-size: 4vh;color:#800000;padding-left:20px;" class="fa-solid fa-right-from-bracket"></i></a>
+
 
         </div>
-
+    {% if  username == 'Login' %}
+    <div></div>
+    {% else %}
+        <div><a href="/logout/"><h5 style="font-size:22px;margin:15px;">Logout</h5></a></div>
+    {% endif %}
 </header>
 
-<div class="carousel">
-
-    <img src="/static/images/cart.jpeg" alt="Image 1" style="width:100vw;height:70vh">
-
+<div id="carouselExampleIndicators" style="height:70vh" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" style="height:70vh" src="/static/images/cart1.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" style="height:70vh" src="/static/images/cart3.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" style="height:70vh" src="/static/images/cart4.jpg" alt="Third slide">
+    </div>
   </div>
-
-
-
- <script>
-        window.addEventListener('scroll', function() {
-    var div = document.getElementById('header');
-    var scrollPosition = window.scrollY;
-
-    // Change color based on scroll position
-    if (scrollPosition > 500) {
-        div.style.backgroundColor = '#FFEBCD';
-    } else {
-        div.style.backgroundColor = 'transparent';
-    }
-});
-
-    </script>
-
-
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-<div class="hd"><h11>Daily collection 🛒🛒</h11></div>
 
-<div class="container" style="background:white;display:flex;">
+
+
+
+
+<div class="hd"><h11>Daily collection </h11></div>
+
+<div class="container11" style="background:white;display:flex;">
     {% for i in first %}
 
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5 style="margin:0px;">MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
+
 </div>
 
 <div class="add">
@@ -365,18 +389,19 @@ color:#009935;
 
 
 
-<div class="hd" style="padding-top:20px;"><h11>New collection 🛒🛒</h11></div>
+<div class="hd" style="padding-top:20px;"><h11>New collection </h11></div>
 
 <div class="con2">
-    <div> <button class="scroll-left" style="font-size:70px;height:20vh;border-radius:50px;"><strong><</strong></button></div>
+    <div> <button class="scroll-left" style="font-size:40px;height:10vh;border-radius:30px;"><strong><</strong></button></div>
 <div class="container2">
         {% for div in data %}
             <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height=100% width="400px"></a></div>
         {% endfor %}
     </div>
 
-    <div><button class="scroll-right" style="font-size:70px;height:20vh;border-radius:50px;"><strong>></strong></button></div>
+    <div><button class="scroll-right" style="font-size:40px;height:10vh;border-radius:30px;"><strong>></strong></button></div>
 </div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.container2');
@@ -400,30 +425,29 @@ color:#009935;
 </script>
 
 
-
-<div class="hd"><h11>All collection 🛒🛒</h11></div>
-<div class="container" style="background:white;display:flex;">
+<div class="hd"><h11>All collection </h11></div>
+<div class="container11" style="background:white;display:flex;">
     {% for i in first %}
 
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in second %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in third %}
-   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+   <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
     {% for i in forth %}
-  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=80% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h1>{{ i.name }}</h1><h3>MRP={{ i.price }}</h3></div><div></div></div></a></div>
+  <div class="item"><a href="/home/select_item/{{ i.id }}"><img src="{{ i.image.url }}/" alt="{{ i.name }} image" height=75% width=100%><div style="display:flex; justify-content: space-between;align-items:center;"><div style="padding:15px;"><h3>{{ i.name }}</h3><h5>MRP={{ i.price }}</h5></div><div></div></div></a></div>
     {% endfor %}
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 style="font-size: 40px;">About Us</h2>
-                <p style="font-size:25px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
+<footer class="footer" style="line-height:1">
+    <div class="container12" style="width:98%">
+        <div class="row" style="width:98%">
+            <div class="col-md-12 text-center" style="width:98%">
+                <h2 style="font-size: 25px;">About Us</h2>
+                <p style="font-size:15px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
             </div>
         </div>
         <div class="row" style="display:flex;justify-content:space-between;margin:80px;">
@@ -436,11 +460,11 @@ color:#009935;
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h2 style="font-size: 30px;">Contact Us</h2>
-                <p style="font-size: 30px;">Email: info@example.com</p>
-                <p style="font-size: 30px;">Phone: 123-456-7890</p>
-                <p style="font-size: 30px;">Address: 123 Street, City, Country</p>
+            <div class="col-md-6" >
+                <h2 style="font-size: 20px;">Contact Us</h2>
+                <p style="font-size: 20px;">Email: info@example.com</p>
+                <p style="font-size: 20px;">Phone: 123-456-7890</p>
+                <p style="font-size: 20px;">Address: 123 Street, City, Country</p>
             </div>
         </div>
     </div>

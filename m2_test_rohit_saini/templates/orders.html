@@ -8,31 +8,31 @@
     <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header style="height:7vh;align-item:text-align:center;display:flex;align-items: center;">
+<header style="height:7vh;align-item:text-align:center;display:flex;align-items: center;overflow:hidden">
 
         <div style=" justifyContent: center; alignItems: center;text-align:center;" >
-            <a href="/home/"><i style="font-size: 4vh;color:red;" class="fa-solid fa-house" ></i></a>
+            <a href="/home/"><img src="/static/images/logo.png"  width="120px"></a>
         </div>
     <div>
 
        {% if  username == 'Login' %}
-        <h1 style="padding:12px;"><a href="/login/">{{ username }}</a></h1>
+        <h2 style="padding:12px;"><a href="/login/">{{ username }}</a></h2>
         {% else %}
-        <h1 style="font-size:30px;margin-top:0">{{ username }}</h1>
+        <h2 style="font-size:30px;margin-top:0;padding:12px;font-weights:200;">{{ username }}</h2>
         {% endif %}
     </div>
         <div class="right_header">
-            <a href="/home/orders/"><i style="font-size: 4vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
-            <a href="/home/cart/"><i style="font-size: 4vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
+            <a href="/home/orders/"><i style="font-size: 4vh;color:#ff3333;padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 4vh;color:#ff0000;padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
 
-            <a href="/admin_panal/"><i style="font-size: 4vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
-            <a href="/logout/"><i style="font-size: 4vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/admin_panal/"><i style="font-size: 4vh;color:#b30000;padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
+
 
         </div>
-
+<div><a href="/logout/"><h5 style="font-size:22px;margin:15px;">Logout</h5></a></div>
 </header>
 
-<h1>My Orders</h1>
+<h1 style="font-size:50px;">My Orders</h1>
 
 
 
@@ -62,29 +62,29 @@
     </tbody>
 </table>
 </div>
-<footer class="footer">
+<footer class="footer" style="height:400px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center" style="text-align:center;">
-                <h2 style="font-size: 40px;">About Us</h2>
-                <p style="font-size:25px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
+                <h2 style="font-size: 25px;">About Us</h2>
+                <p style="font-size:15px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
             </div>
         </div>
         <div class="row" style="display:flex;justify-content:space-between;margin:80px;">
             <div class="col-md-6">
-                <h2 style="font-size: 30px;">Quick Links</h2>
+                <h2 style="font-size: 25px;">Quick Links</h2>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a style="font-size:15px;" href="#">Home</a></li>
+                    <li><a style="font-size:15px;" href="#">About</a></li>
+                    <li><a style="font-size:15px;" href="#">Services</a></li>
+                    <li><a style="font-size:15px;" href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h2 style="font-size: 30px;">Contact Us</h2>
-                <p style="font-size: 30px;">Email: info@example.com</p>
-                <p style="font-size: 30px;">Phone: 123-456-7890</p>
-                <p style="font-size: 30px;">Address: 123 Street, City, Country</p>
+            <div class="col-md-6" style="width:50%">
+                <h2 style="font-size: 20px;">Contact Us</h2>
+                <p style="font-size: 20px;">Email: info@example.com</p>
+                <p style="font-size: 20px;">Phone: 123-456-7890</p>
+                <p style="font-size: 20px;">Address: 123 Street, City, Country</p>
             </div>
         </div>
     </div>

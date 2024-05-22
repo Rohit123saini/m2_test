@@ -144,6 +144,8 @@ class home(View):
 
 
 def user_login(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     try:
         if request.method == 'POST':
             username = request.POST.get('username')
@@ -334,18 +336,19 @@ class checkout(View):
                 superusers = User.objects.filter(is_superuser=True)
                 superusers_email = [user.email for user in superusers]
                 usr=User.objects.get(username=request.user)
+                try:
+                    subject1 = 'Order Confirmation'
+                    subject2='New Order'
+                    message1 = f'Thank you for your order! Your order has been successfully placed.orders id_s={ li }.'
+                    message2 = f'New order will be added by { request.user }.https://www.apple.com/in/'
+                    email_from = settings.EMAIL_HOST_USER
+                    recipient_list1 = [usr.email]
+                    recipient_list2 = superusers_email
 
-                subject1 = 'Order Confirmation'
-                subject2='New Order'
-                message1 = f'Thank you for your order! Your order has been successfully placed.orders id_s={ li }.'
-                message2 = f'New order will be added by { request.user }.https://www.apple.com/in/'
-                email_from = settings.EMAIL_HOST_USER
-                recipient_list1 = [usr.email]
-                recipient_list2 = superusers_email
-
-                send_mail(subject1, message1, email_from, recipient_list1)
-                send_mail(subject2, message2, email_from, recipient_list2)
-
+                    send_mail(subject1, message1, email_from, recipient_list1)
+                    send_mail(subject2, message2, email_from, recipient_list2)
+                except:
+                    print("enter you email or password to send emals")
 
             return redirect('orders')
         except Exception as e:

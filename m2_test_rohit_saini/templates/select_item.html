@@ -5,23 +5,20 @@
     <title>select item</title>
 <link rel="stylesheet" href="/static/css/select_item.css">
     <script src="https://kit.fontawesome.com/aad277c9c0.js" crossorigin="anonymous"></script>
+
 <style>   *{
 margin:0;
 padding:0;
 }
-     @media (max-width: 800px){.item{
-        margin-top:7vh;
-        display:grid;
-        justify-content:center;
-        margin-left:30px;
-        }}
+
+
 </style>
 </head>
 <body>
 <header style="height:7vh;align-item:text-align:center;display:flex;align-items: center;padding-left:0px;">
 
         <div style=" justifyContent: center; alignItems: center;text-align:center;" >
-            <a href="/home/"><i style="font-size: 4vh;color:red;" class="fa-solid fa-house" ></i></a>
+            <a href="/home/"><img src="/static/images/logo.png"  width="120px"></a>
         </div>
     <div>
 
@@ -31,18 +28,18 @@ padding:0;
         {% endif %}
     </div>
         <div class="right_header">
-            <a href="/home/orders/"><i style="font-size: 4vh;color:rgb(150, 150, 150);padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
-            <a href="/home/cart/"><i style="font-size: 4vh;color:rgb(120, 120, 120);padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
+            <a href="/home/orders/"><i style="font-size: 4vh;color:#ff3333;padding-left:10px;" class="fa-solid fa-truck-arrow-right"></i></a>
+            <a href="/home/cart/"><i style="font-size: 4vh;color:#ff0000;padding-left:10px;" class="fa-solid fa-cart-plus"></i></a>
 
-            <a href="/admin_panal/"><i style="font-size: 4vh;color:rgb(90, 90, 90);padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
-            <a href="/logout/"><i style="font-size: 4vh;color:rgb(60, 60, 60);padding-left:10px;" class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="/admin_panal/"><i style="font-size: 4vh;color:#b30000;padding-left:10px;" class="fa-solid fa-user-tie"></i></a>
+
 
         </div>
 
 </header>
 
 <div class="item">
-<div style="width:40%">
+<div class="imgg">
     <img src="{{ data.image.url }}/" alt="data.name" height="600" width=100%>
 </div>
     <div class="detail">
@@ -86,11 +83,17 @@ padding:0;
             <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
         {% endfor %}
     </div>
+
 <div class="add">
     <div class="add_image"><img src="/static/images/ad1.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad2.jpg" height="350px" width=100%></div>
     <div class="add_image"><img src="/static/images/ad4.jpg" height="350px" width=100%></div>
 </div>
+
+
+
+
+
 <div class="container2">
         {% for div in data3 %}
             <div class="div-item"><a href="/home/select_item/{{ div.id }}"><img src="{{ div.image.url }}" height="300px" width="400px"></a></div>
@@ -98,17 +101,17 @@ padding:0;
     </div>
 
 
-<footer class="footer" style="height:20vw;">
-    <div class="container">
+<footer class="footer" style="height:40%;background:#FFEBCD">
+    <div class="container" style="background:#FFEBCD">
         <div class="row">
             <div class="col-md-12 text-center" style="text-align:center;">
-                <h2 style="font-size: 40px;">About Us</h2>
-                <p style="font-size:25px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
+                <h2 style="font-size: 25px;">About Us</h2>
+                <p style="font-size:15px;">Discover excellence on our e-commerce platform. Our curated selection and swift service enhance every shopping experience. With a wide array of products and seamless transactions, our website facilitates your journey to fulfill your aspirations</p>
             </div>
         </div>
-        <div class="row" style="display:flex;justify-content:space-between;margin:80px;">
+        <div class="row" style="display:flex;justify-content:space-between;margin:80px;background:#FFEBCD">
             <div class="col-md-6">
-                <h2 style="font-size: 30px;">Quick Links</h2>
+                <h2 style="font-size: 20px;">Quick Links</h2>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -116,11 +119,11 @@ padding:0;
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <div class="col-md-6">
-                <h2 style="font-size: 30px;">Contact Us</h2>
-                <p style="font-size: 30px;">Email: info@example.com</p>
-                <p style="font-size: 30px;">Phone: 123-456-7890</p>
-                <p style="font-size: 30px;">Address: 123 Street, City, Country</p>
+            <div class="col-md-6" style="width:50%">
+                <h2 style="font-size: 20px;">Contact Us</h2>
+                <p style="font-size: 20px;">Email: info@example.com</p>
+                <p style="font-size: 20px;">Phone: 123-456-7890</p>
+                <p style="font-size: 20px;">Address: 123 Street, City, Country</p>
             </div>
         </div>
     </div>
